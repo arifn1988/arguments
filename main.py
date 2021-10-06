@@ -1,13 +1,13 @@
-
 # Do not modify these lines
 __winc_id__ = '7b9401ad7f544be2a23321292dd61cb6'
 __human_name__ = 'arguments'
 
+
 # Add your code after this line
 
-def greet(name='Bob' , greeting= 'Hello, <name>'):
-	new_greeting=greeting.replace('<name>','Arif')
-	print(new_greeting)
+def greet(name='Bob' , greeting='Hello, <name>!'):
+	new_greeting=greeting.replace('<name>',name)
+	return new_greeting
 
 
 def force(mass,body='earth'):
@@ -24,11 +24,11 @@ def force(mass,body='earth'):
 		'moon':1.6,
 		'pluto':0.6
 		}
-
-
 	return planets[body]*mass
 
 def pull(m1,m2,d):
-	return scipy.constants.G*(m1*m2)/d**2
+	G = 6.67408 * 10**-11
+	return G*(m1*m2)/d**2
 
-print(force(1))
+print(pull(1,1,100))
+
