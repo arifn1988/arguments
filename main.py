@@ -27,8 +27,7 @@ def force(mass,body='earth'):
 	return planets[body]*mass
 
 def pull(m1,m2,d):
-	G = 6.67408 * 10**-11
-	return G*(m1*m2)/d**2
+	G = 6.6740 * 10**-11
+	return (G*m1*m2)/(d**2)
 
-print(pull(1,1,100))
-
+print(pull(5924*10**24,0.1,6371*10**6))
